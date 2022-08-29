@@ -1,15 +1,11 @@
-// 정수와 실수를 입력하여, 두 수의 곱을 출력하는 프로그램 작성
-
+//문제19
+//실수형이 담을 수 없는 범위를 담게 되면?
 #include <stdio.h>
-
 int main(void) {
-	printf("정수와 실수를 입력하세요 :");
-
-	int n1;
-	float f1;
-
-	scanf("%d %f", &n1, &f1);
-
-	printf("%d * %.2f = %.2f\n", n1, f1, n1 * f1);
-
+	float one = 1.0, zero = 0.0, r1, r2;
+	r1 = one / zero;
+	r2 = -one / zero;
+	printf("1.0/0.0 = %f\n", r1);
+	printf("-1/0.0 = %f\n", r2);
+	return 0;
 }
