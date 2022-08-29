@@ -1,18 +1,9 @@
-//아래 오류를 보고 깨달은 점!
-
+//문제17.
+//printf에서 지정된 자리수보다 더 긴 실수를 입력하면 출력할 때,
+//반올림을 하는지, 버리는지 알아보기 위한 예제
 #include <stdio.h>
 int main(void) {
-	int a;
-	float b;
-	//1. printf 2가지 형태
-	//1)printf오류
-	//printf("%d %f\n", 2.5, 1024);
-	//2)printf 오류 수정
-	printf("%d %f\n", 2, 1024.0);
-	printf("VS\n");
-
-	//2. scanf 형태
-	scanf("%d %f", &a, &b);
-	printf("%d %.2f\n", a, b);
+	double x = 5.55555555555;
+	printf("x = %.5f\n", x);
 	return 0;
 }
