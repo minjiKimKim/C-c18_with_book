@@ -1,15 +1,13 @@
-/*
-문제12 > 이스케이프 시퀀스 문자 출력
-*/
+//문제12 > "캐스트연산자가 꼭 필요한 경우"
+//섭씨온도를 입력받아 화씨온도로 변환하는 프로그램
+//32 입력시, 64.0이 나오면 안되고, 89.6이 나와야 함. 캐스트 연산자 힌트!
+
 #include <stdio.h>
 int main(void) {
-	//printf("'\a'");
-	printf("'\b'\n");
-	printf("abcd\bc\n");
-	printf("what?\f\n");
-	printf("\f\n");
-	printf("ddddddd\ta\vdd\rs\n");
-	printf("aaaa\n");
-	printf("1234563\r722\n");
-	printf("123456\r789\n");
+	float F, C;//F:화씨온도, C:섭씨온도
+	printf("섭씨온도를 입력하세요:\n");
+	scanf("%f", &C);
+	F = (float)9 / 5 * C + 32;
+	printf("화씨온도:%.2f\n", F);
+	return 0;
 }
