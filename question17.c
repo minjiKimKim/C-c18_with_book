@@ -1,13 +1,18 @@
-//두 정수를 입력바아, 그 곱을 출력하는 프로그램 작성
+//아래 오류를 보고 깨달은 점!
 
 #include <stdio.h>
+int main(void) {
+	int a;
+	float b;
+	//1. printf 2가지 형태
+	//1)printf오류
+	//printf("%d %f\n", 2.5, 1024);
+	//2)printf 오류 수정
+	printf("%d %f\n", 2, 1024.0);
+	printf("VS\n");
 
-int main() {
-	printf("두 정수 값을 입력하세요 :");
-
-	int n1, n2;
-	scanf("%d %d", &n1, &n2);
-	printf("%d * %d = %d", n1, n2, n1 * n2);
-	
+	//2. scanf 형태
+	scanf("%d %f", &a, &b);
+	printf("%d %.2f\n", a, b);
 	return 0;
 }
