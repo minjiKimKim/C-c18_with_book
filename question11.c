@@ -1,26 +1,16 @@
-/*
-문제 11 
-> 숫자 문자 상수와 일반적인 숫자는 다르다.
-  즉, 문자 상수인 '5'와 정수 상수 5는 완전히 다르다. 
-  다음 프로그램을 실행해보자!
-
-  >>아스키코드표 읽는법, 숫자문자상수 또한 "문자""상수"이다!
-*/
-
+//문제11
+//수식에는 값과 "형"이 있다.
+//수식의 형 관련 >1)자동형변환 2)강제형변환-캐스트연산자
+//수식의 형을 알고 싶을 때는 sizeof연산자를 쓰자
 #include <stdio.h>
 int main(void) {
-	printf("'0' = %d, 0 = %d\n", '0', 0);
-	printf("'1' = %d, 1 = %d\n", '1', 1);
-	printf("'2' = %d, 2 = %d\n", '2', 2);
-	printf("'3' = %d, 3 = %d\n", '3', 3);
-	printf("'4' = %d, 4 = %d\n", '4', 4);
-	printf("'5' = %d, 5 = %d\n", '5', 5);
-	printf("'6' = %d, 6 = %d\n", '6', 6);
-	printf("'7' = %d, 7 = %d\n", '7', 7);
-	printf("'8' = %d, 8 = %d\n", '8', 8);
-	printf("'9' = %d, 9 = %d\n", '9', 9);
+	char c = 'A';
 
-	printf("'!' = %d  %x %#x\n", '!', '!', '!');
-	printf("%c\n", 33);
+	printf("sizeof(c) = %u\n", sizeof(c));//char형
+	printf("sizeof('A') = %u\n", sizeof('A'));//**문자상수 자체는 int형이다
+	printf("sizeof(c+c) = %u\n", sizeof(c + c));//int형[정수승격]
+	printf("sizeof(c='A') = %u\n", sizeof(c = 'A'));//char형
+
+	return 0;
 
 }
