@@ -1,30 +1,26 @@
-//문제11.+12
-//for문 루프에서 break문과 continue문의 동작 살펴보기
 /*
-#include <stdio.h>
-int main(void) {
-	int i = 1;
-	for (putchar('1'); putchar('2'); putchar('3')) {
-		if (++i == 5)
-			break;
-		putchar('4');
-		continue;
-		putchar('5');
-	}
-	return 0;
-}*/
+문제 11 
+> 숫자 문자 상수와 일반적인 숫자는 다르다.
+  즉, 문자 상수인 '5'와 정수 상수 5는 완전히 다르다. 
+  다음 프로그램을 실행해보자!
+
+  >>아스키코드표 읽는법, 숫자문자상수 또한 "문자""상수"이다!
+*/
 
 #include <stdio.h>
 int main(void) {
-	putchar('1');
-	putchar('2');
-	int i = 0; 
-	while (1) {
-		putchar('4');
-		putchar('3');
-		putchar('2');
-		if (++i == 3)
-			break;
-	}
-	return 0;
+	printf("'0' = %d, 0 = %d\n", '0', 0);
+	printf("'1' = %d, 1 = %d\n", '1', 1);
+	printf("'2' = %d, 2 = %d\n", '2', 2);
+	printf("'3' = %d, 3 = %d\n", '3', 3);
+	printf("'4' = %d, 4 = %d\n", '4', 4);
+	printf("'5' = %d, 5 = %d\n", '5', 5);
+	printf("'6' = %d, 6 = %d\n", '6', 6);
+	printf("'7' = %d, 7 = %d\n", '7', 7);
+	printf("'8' = %d, 8 = %d\n", '8', 8);
+	printf("'9' = %d, 9 = %d\n", '9', 9);
+
+	printf("'!' = %d  %x %#x\n", '!', '!', '!');
+	printf("%c\n", 33);
+
 }
